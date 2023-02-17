@@ -131,14 +131,15 @@ void Pulse::testerRJ45(){
     Serial.print("================================================");
     Serial.println();
 
-/*-----voici, on crée notre algorithme pour afficher le type du câble-----*/
-/*-----nous avons basé l'algorithme sur le diagramme du câble croisé -----*/
-/*-----et du câble droit et nous le faisons en identifiant chaque pinIn---*/ 
-/*-----et pinOut, la partie difficile était d'identifier l'ordre de  -----*/
-/*-----chaque câble comme ci-dessous :                               -----*/
-/*-----Câble Droit  - 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8                  -----*/
-/*-----Câble Croisé - 3 | 6 | 1 | 8 | 7 | 2 | 5 | 4                  -----*/
-/*-----enfin, on affiche le resultat avec un delai du 1000ms.        -----*/
+    /*  voici, on crée notre algorithme pour afficher le type du câble
+        nous avons basé l'algorithme sur le diagramme du câble croisé
+        et du câble droit et nous le faisons en identifiant chaque pinIn 
+        et pinOut, la partie difficile était d'identifier l'ordre de
+        chaque câble comme ci-dessous :                               
+        Câble Droit  - 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8                  
+        Câble Croisé - 3 | 6 | 1 | 8 | 7 | 2 | 5 | 4                  
+        enfin, on affiche le resultat avec un delai du 8000ms.        
+        8000ms parce qu'on vérifie , chaque broche pour le signal.  */
     if (
         pulseOut1 && pulseIn3 == HIGH &&
         pulseOut2 && pulseIn6 == HIGH &&
