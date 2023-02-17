@@ -64,15 +64,15 @@ public:
     int pinOut7,
     int pinOut8);
 
-/*-----on crée nos méthodes pour l'initialisation des broches pour pinIn et pinOut-----*/
+/*-----on crée nos constructeurs pour l'initialisation des broches pour pinIn et pinOut-----*/
     void pinIn(); 
 
     void pinOut(); 
 
-/*-----on declare notre méthode qu'on va utiliser pour notre digitalRead-----*/
+/*-----on declare notre constructeur qu'on va utiliser pour notre digitalRead-----*/
     void pulseIO();
 
-/*-----voici notre méthode principale pour la logique du notre programme-----*/
+/*-----voici notre constructeur principale pour la logique du notre programme-----*/
     void testerRJ45();
 
 };

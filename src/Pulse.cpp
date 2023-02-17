@@ -1,5 +1,6 @@
-#include "Pulse.h"
+#include "Pulse.h"          /*-----on appelle la librairie pour relier nos methodes en dehors de la classe-----*/
 
+/*on définit nos méthodes/fonctions en dehors de la classe*/
 Pulse::Pulse(
     int pinIn1,
     int pinIn2,
@@ -35,6 +36,7 @@ Pulse::Pulse(
     this->pinOut8 = pinOut8;
 }
 
+/*-----on fait notre methodes pour l'initialisation du nos broches pinIn -----*/
 void Pulse::pinIn(){
     pinMode(pinIn1,INPUT);
     pinMode(pinIn2,INPUT);
@@ -46,6 +48,7 @@ void Pulse::pinIn(){
     pinMode(pinIn8,INPUT);
 }
 
+/*-----on fait notre methodes pour l'initialisation du nos broches pinOut -----*/
 void Pulse::pinOut(){
     pinMode(pinOut1,INPUT_PULLUP);
     pinMode(pinOut2,INPUT_PULLUP);
@@ -57,6 +60,8 @@ void Pulse::pinOut(){
     pinMode(pinOut8,INPUT_PULLUP);
 }
 
+/*-----on fait notre methodes pour definir nos variable qu'on va utiliser pour digitalRead-----*/
+/*-----qu'on permet de liser l'état du chaque broche si un signal entrée et sortie.      -----*/
 void Pulse::pulseIO(){
     pulseOut1 = digitalRead(pinOut1);
     pulseIn1 = digitalRead(pinIn1);
@@ -76,6 +81,8 @@ void Pulse::pulseIO(){
     pulseIn8 = digitalRead(pinIn8);
 }
 
+/*-----on fait notre methodes principale qu'est structuré d'afficher pas seulement -----*/
+/*-----le type du câble mais l'autre information comme le signal qui passé au câble-----*/
 void Pulse::testerRJ45(){
     Serial.print("================================================");
     Serial.println();
@@ -123,6 +130,15 @@ void Pulse::testerRJ45(){
     Serial.println();
     Serial.print("================================================");
     Serial.println();
+
+/*-----voici, on crée notre algorithme pour afficher le type du câble-----*/
+/*-----nous avons basé l'algorithme sur le diagramme du câble croisé -----*/
+/*-----et du câble droit et nous le faisons en identifiant chaque pinIn---*/ 
+/*-----et pinOut, la partie difficile était d'identifier l'ordre de  -----*/
+/*-----chaque câble comme ci-dessous :                               -----*/
+/*-----Câble Droit  - 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8                  -----*/
+/*-----Câble Croisé - 3 | 6 | 1 | 8 | 7 | 2 | 5 | 4                  -----*/
+/*-----enfin, on affiche le resultat avec un delai du 1000ms.        -----*/
     if (
         pulseOut1 && pulseIn3 == HIGH &&
         pulseOut2 && pulseIn6 == HIGH &&
