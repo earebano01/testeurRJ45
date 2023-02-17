@@ -2,9 +2,7 @@
 Titre : Testeur RJ45
 Auteur: Adonis Rebano
 Date : 17/02/2023
-Description : Un programme que permettant de tester un câble de réseau et afficher 
-son type.
-
+Description : Un programme que permettant de tester un câble de réseau et afficher son type.
 Version : 0.0.1
 */
 

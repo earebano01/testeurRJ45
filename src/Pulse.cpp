@@ -149,7 +149,7 @@ void Pulse::testerRJ45(){
         pulseOut7 && pulseIn5 == HIGH &&
         pulseOut8 && pulseIn4 == HIGH)
     {
-        Serial.print("| TYPE: Câble Croisé");
+        Serial.print("  TYPE: Câble Croisé");
     }
     else if (
         pulseOut1 && pulseIn1 == HIGH &&
@@ -161,13 +161,12 @@ void Pulse::testerRJ45(){
         pulseOut7 && pulseIn7 == HIGH &&
         pulseOut8 && pulseIn8 == HIGH)
     {
-        Serial.print("| TYPE: Câble Droit");
+        Serial.print("  TYPE: Câble Droit");
     }
     else
     {
-        Serial.print("| TYPE: Inconnue ou Câble Cassé");
+        Serial.print("  TYPE: Inconnue ou Câble Cassé");
     }
-    Serial.print("                           |");
     Serial.println();
     Serial.print("================================================");
     Serial.println();
