@@ -1,14 +1,14 @@
 #include "Pulse.h"
 
 Pulse::Pulse(
-    int pin1,
-    int pin2,
-    int pin3,
-    int pin4,
-    int pin5,
-    int pin6,
-    int pin7,
-    int pin8,
+    int pinIn1,
+    int pinIn2,
+    int pinIn3,
+    int pinIn4,
+    int pinIn5,
+    int pinIn6,
+    int pinIn7,
+    int pinIn8,
     int pinOut1,
     int pinOut2,
     int pinOut3,
@@ -17,14 +17,14 @@ Pulse::Pulse(
     int pinOut6,
     int pinOut7,
     int pinOut8){
-    this->pin1 = pin1;
-    this->pin2 = pin2;
-    this->pin3 = pin3;
-    this->pin4 = pin4;
-    this->pin5 = pin5;
-    this->pin6 = pin6;
-    this->pin7 = pin7;
-    this->pin8 = pin8;
+    this->pinIn1 = pinIn1;
+    this->pinIn2 = pinIn2;
+    this->pinIn3 = pinIn3;
+    this->pinIn4 = pinIn4;
+    this->pinIn5 = pinIn5;
+    this->pinIn6 = pinIn6;
+    this->pinIn7 = pinIn7;
+    this->pinIn8 = pinIn8;
     this->pinOut1 = pinOut1;
     this->pinOut2 = pinOut2;
     this->pinOut3 = pinOut3;
@@ -36,14 +36,14 @@ Pulse::Pulse(
 }
 
 void Pulse::pinIn(){
-    pinMode(pin1,INPUT);
-    pinMode(pin2,INPUT);
-    pinMode(pin3,INPUT);
-    pinMode(pin4,INPUT);
-    pinMode(pin5,INPUT);
-    pinMode(pin6,INPUT);
-    pinMode(pin7,INPUT);
-    pinMode(pin8,INPUT);
+    pinMode(pinIn1,INPUT);
+    pinMode(pinIn2,INPUT);
+    pinMode(pinIn3,INPUT);
+    pinMode(pinIn4,INPUT);
+    pinMode(pinIn5,INPUT);
+    pinMode(pinIn6,INPUT);
+    pinMode(pinIn7,INPUT);
+    pinMode(pinIn8,INPUT);
 }
 
 void Pulse::pinOut(){
@@ -59,21 +59,21 @@ void Pulse::pinOut(){
 
 void Pulse::pulseIO(){
     pulseOut1 = digitalRead(pinOut1);
-    pulseIn1 = digitalRead(pin1);
+    pulseIn1 = digitalRead(pinIn1);
     pulseOut2 = digitalRead(pinOut2);
-    pulseIn2 = digitalRead(pin2);
+    pulseIn2 = digitalRead(pinIn2);
     pulseOut3 = digitalRead(pinOut3);
-    pulseIn3 = digitalRead(pin3);
+    pulseIn3 = digitalRead(pinIn3);
     pulseOut4 = digitalRead(pinOut4);
-    pulseIn4 = digitalRead(pin4);
+    pulseIn4 = digitalRead(pinIn4);
     pulseOut5 = digitalRead(pinOut5);
-    pulseIn5 = digitalRead(pin5);
+    pulseIn5 = digitalRead(pinIn5);
     pulseOut6 = digitalRead(pinOut6);
-    pulseIn6 = digitalRead(pin6);
+    pulseIn6 = digitalRead(pinIn6);
     pulseOut7 = digitalRead(pinOut7);
-    pulseIn7 = digitalRead(pin7);
+    pulseIn7 = digitalRead(pinIn7);
     pulseOut8 = digitalRead(pinOut8);
-    pulseIn8 = digitalRead(pin8);
+    pulseIn8 = digitalRead(pinIn8);
 }
 
 void Pulse::testerRJ45(){

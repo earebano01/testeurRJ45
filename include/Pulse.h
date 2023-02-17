@@ -1,18 +1,20 @@
 #include <Arduino.h>
 
+/*-----on declare notre classe Pulse-----*/
 class Pulse
 {
-private:
-    
-    int pin1;
-    int pin2;
-    int pin3;
-    int pin4;
-    int pin5;
-    int pin6;
-    int pin7;
-    int pin8;
+private:        
+/*-----on declare notre variable pour notre pinIn-----*/
+    int pinIn1;
+    int pinIn2;
+    int pinIn3;
+    int pinIn4;
+    int pinIn5;
+    int pinIn6;
+    int pinIn7;
+    int pinIn8;
 
+/*-----on declare notre variable pour notre pinOut-----*/
     int pinOut1;
     int pinOut2;
     int pinOut3;
@@ -22,6 +24,7 @@ private:
     int pinOut7;
     int pinOut8;
 
+/*-----on declare notre variable pour notre pulseIn-----*/
     int pulseIn1 = 0;
     int pulseIn2 = 0;
     int pulseIn3 = 0;
@@ -31,6 +34,7 @@ private:
     int pulseIn7 = 0;
     int pulseIn8 = 0;
 
+/*-----on declare notre variable pour notre pulseOut-----*/
     int pulseOut1 = 0;
     int pulseOut2 = 0;
     int pulseOut3 = 0;
@@ -41,15 +45,16 @@ private:
     int pulseOut8 = 0;
     
 public:
+/*-----on declare notre constructeur Pulse-----*/
     Pulse(
-    int pin1,
-    int pin2,
-    int pin3,
-    int pin4,
-    int pin5,
-    int pin6,
-    int pin7,
-    int pin8,
+    int pinIn1,
+    int pinIn2,
+    int pinIn3,
+    int pinIn4,
+    int pinIn5,
+    int pinIn6,
+    int pinIn7,
+    int pinIn8,
     int pinOut1,
     int pinOut2,
     int pinOut3,
@@ -59,12 +64,15 @@ public:
     int pinOut7,
     int pinOut8);
 
+/*-----on crée nos méthodes pour l'initialisation des broches pour pinIn et pinOut-----*/
     void pinIn(); 
 
     void pinOut(); 
 
+/*-----on declare notre méthode qu'on va utiliser pour notre digitalRead-----*/
     void pulseIO();
 
+/*-----voici notre méthode principale pour la logique du notre programme-----*/
     void testerRJ45();
 
 };
