@@ -171,5 +171,5 @@ void Pulse::testerRJ45(){
     Serial.println();
     Serial.print("================================================");
     Serial.println();
-    delay(1000);
+    delay(8000);
 }
