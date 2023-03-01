@@ -38,14 +38,14 @@ Pulse::Pulse(
 
 /*-----on fait notre methodes pour l'initialisation du nos broches pinIn -----*/
 void Pulse::pinIn(){
-    pinMode(pinIn1,INPUT);
-    pinMode(pinIn2,INPUT);
-    pinMode(pinIn3,INPUT);
-    pinMode(pinIn4,INPUT);
-    pinMode(pinIn5,INPUT);
-    pinMode(pinIn6,INPUT);
-    pinMode(pinIn7,INPUT);
-    pinMode(pinIn8,INPUT);
+    pinMode(pinIn1,INPUT_PULLDOWN);
+    pinMode(pinIn2,INPUT_PULLDOWN);
+    pinMode(pinIn3,INPUT_PULLDOWN);
+    pinMode(pinIn4,INPUT_PULLDOWN);
+    pinMode(pinIn5,INPUT_PULLDOWN);
+    pinMode(pinIn6,INPUT_PULLDOWN);
+    pinMode(pinIn7,INPUT_PULLDOWN);
+    pinMode(pinIn8,INPUT_PULLDOWN);
 }
 
 /*-----on fait notre methodes pour l'initialisation du nos broches pinOut -----*/
